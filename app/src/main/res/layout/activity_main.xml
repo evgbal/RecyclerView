@@ -42,17 +42,17 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="?attr/colorOnPrimary"
         app:menu="@menu/navigation_menu"
         app:headerLayout="@layout/nav_header"
-        app:itemIconTint="?attr/colorPrimary"
-        app:itemTextColor="?attr/colorPrimary"
+        app:itemIconTint="?attr/colorStatusSilverIcon"
+        app:itemTextColor="?attr/colorOnSurface"
 
         />
 

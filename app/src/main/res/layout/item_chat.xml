@@ -255,7 +255,7 @@
         android:padding="2dp"
 
         android:gravity="center"
-        android:background="@drawable/circle_border_silver_7"
+        android:background="@drawable/circle_border_silver_10"
         android:textColor="?attr/colorOnPrimary"
         app:layout_constraintEnd_toStartOf="@id/answered_to_you_status"
         app:layout_constraintBottom_toBottomOf="@id/right_bottom_anchor"
