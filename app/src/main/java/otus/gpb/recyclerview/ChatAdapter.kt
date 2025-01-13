@@ -13,7 +13,6 @@ import otus.gpb.recyclerview.databinding.ItemChatBinding
 
 
 class ChatAdapter(
-    //private val onDeleteChat: (Chat) -> Unit,
     private val onArchiveChat: (Chat) -> Unit // Новый callback для архивирования
 ) : ListAdapter<Chat, ChatAdapter.ChatViewHolder>(ChatDiffCallback()) {
 
@@ -82,17 +81,6 @@ class ChatAdapter(
                 binding.answererIcon.visibility = View.GONE
             }
 
-
-//            // Обработчик длинного нажатия для удаления
-//            binding.root.setOnLongClickListener {
-//                val position = adapterPosition
-//                if (position != RecyclerView.NO_POSITION) {
-//                    val chatObj = currentList[position]
-//                    onDeleteChat(chatObj)
-//                }
-//                true
-//            }
-
             // Обработчик нажатия на кнопку архивирования
             binding.archiveButton.setOnClickListener {
                 val position = adapterPosition
@@ -112,9 +100,6 @@ class ChatAdapter(
                 val archiveLayout = binding.root.findViewById<FrameLayout>(R.id.archiveButtonLayout)
                 val itemLayout = binding.root.findViewById<View>(R.id.chatItemLayout)
                 if (archiveLayout.visibility == View.VISIBLE) {
-                    //archiveLayout.visibility = View.GONE
-                    //notifyItemChanged(adapterPosition)
-
                     // Анимация возврата в исходное положение
                     itemLayout.animate()
                         .translationX(0f)

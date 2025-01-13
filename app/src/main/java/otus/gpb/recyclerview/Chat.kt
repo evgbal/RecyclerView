@@ -1,6 +1,5 @@
 package otus.gpb.recyclerview
 
-
 // Parent interface
 interface Chat {
     val id: Int
@@ -21,11 +20,6 @@ interface Chat {
     var isOpponnentReaded: Boolean
     var isLock: Boolean
 
-
-    fun isRead(): Boolean { return unreadMessageCount == 0 }
-
-    // Optionally, we can add the equals method in the interface itself
-    // But it should only be used in specific cases, not common for all types
     override fun equals(other: Any?): Boolean
 }
 

@@ -8,64 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-<!--    &lt;!&ndash; Primary Colors &ndash;&gt;-->
-<!--    <color name="telegram_blue">#0088CC</color>-->
-<!--    <color name="telegram_light_blue">#33A8E0</color>-->
-<!--    <color name="telegram_dark_blue">#005A8B</color>-->
-<!--    <color name="telegram_gray">#F8F8F8</color>-->
-<!--    <color name="telegram_dark_gray">#AAAAAA</color>-->
-<!--    <color name="telegram_white">#FFFFFF</color>-->
-<!--    <color name="telegram_black">#000000</color>-->
-
-<!--    &lt;!&ndash; Secondary Colors &ndash;&gt;-->
-<!--    <color name="telegram_green">#4CAF50</color>-->
-<!--    <color name="telegram_red">#F44336</color>-->
-
-
-
-<!--    &lt;!&ndash; Primary Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_primary">#FFFFFF</color>-->
-<!--    <color name="telegram_light_primary_variant">#F5F5F5</color>-->
-
-<!--    &lt;!&ndash; Accent Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_accent">#0088CC</color>-->
-<!--    <color name="telegram_light_accent_variant">#005F8A</color>-->
-
-<!--    &lt;!&ndash; Background Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_background">#FFFFFF</color>-->
-<!--    <color name="telegram_light_surface">#F5F5F5</color>-->
-
-<!--    &lt;!&ndash; Text Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_text">#000000</color>-->
-<!--    <color name="telegram_light_text_secondary">#808080</color>-->
-
-<!--    &lt;!&ndash; Divider/Border Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_border">#E0E0E0</color>-->
-
-
-
-
-<!--    &lt;!&ndash; Primary Colors &ndash;&gt;-->
-<!--    <color name="telegram_dark_primary">#1E1E2E</color>-->
-<!--    <color name="telegram_dark_primary_variant">#121212</color>-->
-
-<!--    &lt;!&ndash; Accent Colors &ndash;&gt;-->
-<!--    <color name="telegram_dark_accent">#0088CC</color>-->
-<!--    <color name="telegram_dark_accent_variant">#005F8A</color>-->
-
-<!--    &lt;!&ndash; Background Colors &ndash;&gt;-->
-<!--    <color name="telegram_dark_background">#0F0F0F</color>-->
-<!--    <color name="telegram_dark_surface">#1C1C1C</color>-->
-
-<!--    &lt;!&ndash; Text Colors &ndash;&gt;-->
-<!--    <color name="telegram_dark_text">#FFFFFF</color>-->
-<!--    <color name="telegram_dark_text_secondary">#B0B0B0</color>-->
-
-<!--    &lt;!&ndash; Other Colors &ndash;&gt;-->
-<!--    <color name="telegram_dark_border">#282828</color>-->
-
-
-
     <color name="blue_500">#2196F3</color>
     <color name="blue_700">#1976D2</color>
     <color name="green_300">#81C784</color>
@@ -73,7 +15,6 @@
     <color name="blue_300">#64B5F6</color>
     <color name="green_200">#A5D6A7</color>
     <color name="green_500">#4CAF50</color>
-
 
     <!-- Light Theme Colors -->
     <color name="colorPrimary">#2c75b0</color> <!-- Darker blue for header and primary elements -->
@@ -90,11 +31,7 @@
 
     <color name="divider">#d3d3d3</color> <!-- Divider lines between messages or lists -->
 
-<!--    d3d3d3-->
-
     <color name="iconTint">#9e9e9e</color> <!-- Tint for icons in the UI -->
-
-
 
     <!-- Dark Theme Colors -->
     <color name="colorDarkPrimary">#1f2a36</color> <!-- Darker blue for header and primary elements -->
@@ -111,76 +48,5 @@
 
     <color name="DarkDivider">#212121</color> <!-- Divider lines between messages or lists -->
     <color name="DarkIconTint">#9e9e9e</color> <!-- Tint for icons in the UI -->
-
-<!--    &lt;!&ndash; Primary Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_primary">#0088CC</color> &lt;!&ndash; Telegram blue &ndash;&gt;-->
-<!--    <color name="telegram_light_primary_variant">#0077B5</color> &lt;!&ndash; Darker variant &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Background Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_background">#FFFFFF</color> &lt;!&ndash; White &ndash;&gt;-->
-<!--    <color name="telegram_light_surface">#F3F4F6</color> &lt;!&ndash; Light grey for surfaces &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Text Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_text_primary">#000000</color> &lt;!&ndash; Black for main text &ndash;&gt;-->
-<!--    <color name="telegram_light_text_secondary">#5F6368</color> &lt;!&ndash; Dark grey for secondary text &ndash;&gt;-->
-<!--    <color name="telegram_light_text_hint">#A6A6A6</color> &lt;!&ndash; Lighter grey for hints &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Divider and Border Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_divider">#E0E0E0</color> &lt;!&ndash; Light grey for dividers &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Chat Bubble Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_bubble_sent">#E8F7FF</color> &lt;!&ndash; Light blue for sent messages &ndash;&gt;-->
-<!--    <color name="telegram_light_bubble_received">#FFFFFF</color> &lt;!&ndash; White for received messages &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Action Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_action">#00A0D1</color> &lt;!&ndash; Action button color &ndash;&gt;-->
-<!--    <color name="telegram_light_action_archive">#F2F2F2</color> &lt;!&ndash; Background for archive button &ndash;&gt;-->
-<!--    <color name="telegram_light_action_text">#5F6368</color> &lt;!&ndash; Grey for action text &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Status Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_online">#4CAF50</color> &lt;!&ndash; Green for online status &ndash;&gt;-->
-<!--    <color name="telegram_light_typing">#FFA000</color> &lt;!&ndash; Orange for typing status &ndash;&gt;-->
-<!--    <color name="telegram_light_error">#FF5252</color> &lt;!&ndash; Red for errors &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Badge Colors &ndash;&gt;-->
-<!--    <color name="telegram_light_badge_background">#FF5252</color> &lt;!&ndash; Red for unread count badges &ndash;&gt;-->
-<!--    <color name="telegram_light_badge_text">#FFFFFF</color> &lt;!&ndash; White text on badges &ndash;&gt;-->
-
-
-
-
-<!--    &lt;!&ndash; Primary Colors &ndash;&gt;-->
-<!--    <color name="colorPrimary">#0088CC</color> &lt;!&ndash; Telegram Blue &ndash;&gt;-->
-<!--    <color name="colorPrimaryVariant">#006AA3</color> &lt;!&ndash; Darker Blue &ndash;&gt;-->
-<!--    <color name="colorOnPrimary">#FFFFFF</color> &lt;!&ndash; White for text/icons on blue &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Background Colors &ndash;&gt;-->
-<!--    <color name="backgroundLight">#F5F5F5</color> &lt;!&ndash; Light gray for the background &ndash;&gt;-->
-<!--    <color name="backgroundChat">#FFFFFF</color> &lt;!&ndash; White for chat background &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Text Colors &ndash;&gt;-->
-<!--    <color name="textPrimary">#000000</color> &lt;!&ndash; Black for primary text &ndash;&gt;-->
-<!--    <color name="textSecondary">#6C6C6C</color> &lt;!&ndash; Gray for secondary text &ndash;&gt;-->
-<!--    <color name="textLink">#0088CC</color> &lt;!&ndash; Telegram Blue for links &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Divider and Border Colors &ndash;&gt;-->
-<!--    <color name="divider">#E0E0E0</color> &lt;!&ndash; Light gray for dividers &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Chat Bubble Colors &ndash;&gt;-->
-<!--    <color name="chatBubbleSent">#DCF8C6</color> &lt;!&ndash; Light green for sent messages &ndash;&gt;-->
-<!--    <color name="chatBubbleReceived">#FFFFFF</color> &lt;!&ndash; White for received messages &ndash;&gt;-->
-<!--    <color name="chatBubbleTextSent">#000000</color> &lt;!&ndash; Black text in sent messages &ndash;&gt;-->
-<!--    <color name="chatBubbleTextReceived">#000000</color> &lt;!&ndash; Black text in received messages &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Icon Colors &ndash;&gt;-->
-<!--    <color name="iconColor">#6C6C6C</color> &lt;!&ndash; Gray for icons &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Button Colors &ndash;&gt;-->
-<!--    <color name="buttonColor">#0088CC</color> &lt;!&ndash; Telegram Blue for buttons &ndash;&gt;-->
-<!--    <color name="buttonTextColor">#FFFFFF</color> &lt;!&ndash; White for button text &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Status Bar and Navigation Bar &ndash;&gt;-->
-<!--    <color name="statusBarColor">#006AA3</color> &lt;!&ndash; Darker Blue &ndash;&gt;-->
-<!--    <color name="navigationBarColor">#FFFFFF</color> &lt;!&ndash; White for navigation bar &ndash;&gt;-->
 
 </resources>

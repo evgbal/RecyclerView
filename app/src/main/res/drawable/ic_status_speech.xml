@@ -17,23 +17,23 @@
         android:pathData="M8,1A7,7 0 1,0 15,8A7,7 0 0,0 8,1Z" />
     <!-- First White Line (Shortest: 2dp, Centered) -->
     <path
-        android:strokeColor="#FFFFFF"
+        android:pathData="M6,7L6,9"
         android:strokeWidth="1"
-        android:strokeLineCap="round"
-        android:pathData="M6,7L6,9" />
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
 
     <!-- Second White Line (Longest: 6dp, Centered) -->
     <path
-        android:strokeColor="#FFFFFF"
+        android:pathData="M8,5L8,11"
         android:strokeWidth="1"
-        android:strokeLineCap="round"
-        android:pathData="M8,5L8,11" />
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
 
     <!-- Third White Line (Medium: 4dp, Centered) -->
     <path
-        android:strokeColor="#FFFFFF"
+        android:pathData="M10,6L10,10"
         android:strokeWidth="1"
-        android:strokeLineCap="round"
-        android:pathData="M10,6L10,10" />
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
 
 </vector>

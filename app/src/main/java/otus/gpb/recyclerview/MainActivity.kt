@@ -28,11 +28,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView.addItemDecoration(divider)
 
         chatAdapter = ChatAdapter(
-//            onDeleteChat = { chat ->
-//                val updatedList = chatAdapter.currentList.toMutableList()
-//                updatedList.remove(chat)
-//                chatAdapter.submitList(updatedList)
-//            },
             onArchiveChat = { chat ->
                 // Обработка архивирования
                 val updatedList = chatAdapter.currentList.toMutableList()
@@ -44,47 +39,6 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = chatAdapter
-
-
-//        // Set up ItemTouchHelper for swipe actions
-//        val itemTouchHelperCallback = object : ItemTouchHelper.SimpleCallback(
-//            ItemTouchHelper.UP or ItemTouchHelper.DOWN,
-//            ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
-//        ) {
-//            override fun onMove(
-//                recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder
-//            ): Boolean = false
-//
-//            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-//                val position = viewHolder.adapterPosition
-//                //val chat = chatAdapter.getItem(position)
-//                // Handle swipe action, e.g., delete chat
-//                //chatAdapter.onDeleteChat(chat)
-//
-//
-//                //val itemLayout = viewHolder.itemView.findViewById<LinearLayout>(R.id.chatItemLayout)
-//                val archiveLayout = viewHolder.itemView.findViewById<FrameLayout>(R.id.archiveButtonLayout)
-//
-//                // Показать шторку с архивом при свайпе
-//                archiveLayout.visibility = View.VISIBLE
-//
-//                // Сдвигаем основной элемент (chatItemLayout) влево, чтобы показать архив
-//                //itemLayout.animate().translationX(-itemLayout.width.toFloat()).setDuration(200).start()
-//
-//                // Кнопка архивирования
-//                val archiveButton = viewHolder.itemView.findViewById<ImageButton>(R.id.archiveButton)
-//                archiveButton.setOnClickListener {
-//                    // Обработать архивирование
-//                    //onArchiveChat(chat)
-//                    archiveLayout.visibility = View.GONE  // Скрыть архивный элемент
-//                }
-//            }
-//
-//            override fun isItemViewSwipeEnabled(): Boolean = true
-//        }
-
-        //val itemTouchHelper = ItemTouchHelper(itemTouchHelperCallback)
-        //itemTouchHelper.attachToRecyclerView(recyclerView)
 
         val itemTouchHelperCallback = object : ItemTouchHelper.Callback() {
 
@@ -104,55 +58,6 @@ class MainActivity : AppCompatActivity() {
                 // Перемещение элементов отключено
                 return false
             }
-
-//            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-//                itemTouchHelper?.attachToRecyclerView(null)
-//                itemTouchHelper?.attachToRecyclerView(recyclerView)
-//
-//                val archiveLayout = viewHolder.itemView.findViewById<FrameLayout>(R.id.archiveButtonLayout)
-//                val itemLayout = viewHolder.itemView.findViewById<View>(R.id.chatItemLayout)
-//
-//                val position = viewHolder.adapterPosition
-//                if (position == RecyclerView.NO_POSITION) return
-//
-//                if (direction == ItemTouchHelper.LEFT && archiveLayout.visibility != View.VISIBLE) {
-//
-//
-//                    // Проверяем расстояние свайпа
-//                    val translationX = abs(viewHolder.itemView.translationX);
-//                    if (translationX >= viewHolder.itemView.width * 0.8) {
-//
-//                        // Длинный свайп: Удаление
-//                        //val position = viewHolder.adapterPosition
-//                        val chatObj = chatAdapter.currentList[position];
-//                        val updatedList = chatAdapter.currentList.toMutableList()
-//                        updatedList.remove(chatObj)
-//                        chatAdapter.submitList(updatedList)
-//                        //val item: String = chatAdapter.getData().get(position)
-//                        //chatAdapter.removeItem(position)
-//                        Toast.makeText(this@MainActivity, "Deleted: $chatObj", Toast.LENGTH_SHORT).show()
-//                        chatAdapter.notifyItemRemoved(position)
-//                    } else {
-//                        // Показать шторку
-//                        archiveLayout.visibility = View.VISIBLE
-//                        itemLayout.animate().translationX(-archiveLayout.width.toFloat()).setDuration(500).start()
-//                    }
-//
-//                    // Сбросить состояние ViewHolder после анимации
-//                    //itemLayout.postDelayed({
-//                        //itemTouchHelper.attachToRecyclerView(null)
-//                        //chatAdapter.notifyItemChanged(position)
-//                        //itemTouchHelper.attachToRecyclerView(recyclerView)
-//                    //}, 500)
-//                }
-//
-////                // Сброс состояния
-////                itemLayout.postDelayed({
-////                    archiveLayout.visibility = View.GONE
-////                    itemLayout.animate().translationX(0f).setDuration(1000).start()
-////                    chatAdapter.notifyItemChanged(position)
-////                }, 3000)
-//            }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
@@ -195,35 +100,6 @@ class MainActivity : AppCompatActivity() {
                 // Выполняем стандартный рендеринг
                 super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
             }
-
-
-//            override fun clearView(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder) {
-//                super.clearView(recyclerView, viewHolder)
-//                // Возвращаем элемент в исходное положение
-//                val archiveLayout = viewHolder.itemView.findViewById<FrameLayout>(R.id.archiveButtonLayout)
-//                val itemLayout = viewHolder.itemView.findViewById<View>(R.id.chatItemLayout)
-//                //archiveLayout.visibility = View.GONE
-//                // Скрываем шторку и сбрасываем позицию
-//                if (archiveLayout.visibility != View.GONE) {
-//                    archiveLayout.visibility = View.GONE
-//                    //     itemLayout.translationX = 0f
-//                    itemLayout.animate().translationX(0f).setDuration(500).start()
-//
-//                    val position = viewHolder.adapterPosition
-//                    // Сбросить состояние ViewHolder после анимации
-//                    itemLayout.postDelayed({
-//                        //itemTouchHelper.attachToRecyclerView(null)
-//                        chatAdapter.notifyItemChanged(position)
-//                        //itemTouchHelper.attachToRecyclerView(recyclerView)
-//                    }, 500)
-//
-//
-//                    //val position = viewHolder.adapterPosition
-//                    //chatAdapter.notifyItemChanged(position)
-//                }
-//
-//            }
-
 
             override fun clearView(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder) {
                 super.clearView(recyclerView, viewHolder)
@@ -289,20 +165,21 @@ private fun loadChats(): List<Chat> {
         ),
         GroupChat(
             id = 2,
-            title = "Group topic",
+            title = "Mentors",
             lastUserName = "Bob",
             lastMessage = "How are you?",
             time = "11:15",
             isVerified = false,
             avatarUrl = "https://gravatar.com/avatar/1ae9a8dbb50baebe44d7b96d012a73d5?s=400&d=robohash&r=x",
-            isScam = true,
-            unreadMessageCount = 0,
+            isScam = false,
+            unreadMessageCount = 7,
             isMute = false,
             isSpeeching = false,
             isTyping = false,
             isUnreadedAnswerToYou = true,
             isAnswered = true,
-            isLock = true,
+            isLock = false,
+            isPinned = true,
             lastAnswererUrl = "https://i.pinimg.com/736x/c9/fe/fb/c9fefb489d5fdc792ae324103255edd2.jpg"
 
         ),
@@ -328,16 +205,16 @@ private fun loadChats(): List<Chat> {
             isVerified = false,
             avatarUrl = "https://i.pinimg.com/736x/75/26/5b/75265b439fb335a418e79b13b447b1a6.jpg",
             isScam = false,
-            unreadMessageCount = 1,
+            unreadMessageCount = 15,
             isMute = false,
             isSpeeching = false,
             isTyping = true,
-            isUnreadedAnswerToYou = true,
+            isUnreadedAnswerToYou = false,
             isAnswered = false,
             isOpponnentReaded = false
         ),
         UserChat(
-            id = 4,
+            id = 5,
             lastUserName = "Elvis",
             lastMessage = "Dear! Not today.",
             time = "Yesterday",
@@ -351,6 +228,44 @@ private fun loadChats(): List<Chat> {
             isUnreadedAnswerToYou = false,
             isAnswered = true,
             isOpponnentReaded = true
+        ),
+        GroupChat(
+            id = 6,
+            title = "Cat's and mouse",
+            lastUserName = "Catzilla",
+            lastMessage = "Good morning!",
+            time = "11:15",
+            isVerified = false,
+            avatarUrl = "https://s9.travelask.ru/uploads/post/000/031/157/main_image/facebook-bf918145c8d2cee688d53ee7112500d3.jpg",
+            isScam = true,
+            unreadMessageCount = 0,
+            isMute = false,
+            isSpeeching = false,
+            isTyping = false,
+            isUnreadedAnswerToYou = true,
+            isAnswered = true,
+            isLock = true,
+            lastAnswererUrl = "https://i.pinimg.com/originals/52/c6/65/52c665df0515dd447eb92544374cf543.jpg"
+
+        ),
+        GroupChat(
+            id = 7,
+            title = "StarLine Tours",
+            lastUserName = "Bear Grils",
+            lastMessage = "Let's go!",
+            time = "11:15",
+            isVerified = false,
+            avatarUrl = "https://avatars.mds.yandex.net/i?id=c7269ba0c5fc64e968daedd67f497d1d82453fcf-7760894-images-thumbs&n=13",
+            isScam = false,
+            unreadMessageCount = 101,
+            isMute = false,
+            isSpeeching = false,
+            isTyping = false,
+            isUnreadedAnswerToYou = false,
+            isAnswered = true,
+            isLock = false,
+            lastAnswererUrl = "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/78473e64-0a54-46ba-87ad-94b2822e9aaf/1920x"
+
         )
 
 
