@@ -5,21 +5,69 @@ import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.navigation.NavigationView
 import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
     private lateinit var chatAdapter: ChatAdapter
     private var itemTouchHelper: ItemTouchHelper? = null
 
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navigationView: NavigationView
+    private lateinit var toolbar: MaterialToolbar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        this.title = getString(R.string.app_title)
+
+        // Initialize views
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navigationView = findViewById(R.id.navigation_view)
+        toolbar = findViewById(R.id.toolbar)
+
+        // Set up toolbar
+        setSupportActionBar(toolbar)
+
+        // Add navigation drawer toggle
+        val toggle = ActionBarDrawerToggle(
+            this, drawerLayout, toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        )
+        toggle.drawerArrowDrawable.color = ContextCompat.getColor(this, R.color.colorOnPrimary)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        // Handle navigation menu item clicks
+        navigationView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    Toast.makeText(this, getString(R.string.home_selected), Toast.LENGTH_SHORT).show()
+                }
+                R.id.nav_settings -> {
+                    Toast.makeText(this, getString(R.string.settings_selected), Toast.LENGTH_SHORT).show()
+                }
+                R.id.nav_about -> {
+                    Toast.makeText(this,getString(R.string.about_selected), Toast.LENGTH_SHORT).show()
+                }
+            }
+            drawerLayout.closeDrawer(GravityCompat.START)
+            true
+        }
+
 
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
 

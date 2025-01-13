@@ -26,4 +26,14 @@
     <string name="recycler_view">Telegram</string>
     <string name="home">Home</string>
     <string name="exit">Exit</string>
+    <string name="username">Username</string>
+    <string name="avatar">Avatar</string>
+    <string name="navigation_drawer_open">Navigation drawer open</string>
+    <string name="navigation_drawer_close">Navigation drawer close</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="app_title">Telegram</string>
+    <string name="home_selected">Home selected</string>
+    <string name="settings_selected">Settings selected</string>
+    <string name="about_selected">About selected</string>
 </resources>

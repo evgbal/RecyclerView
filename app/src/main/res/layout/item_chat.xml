@@ -260,7 +260,9 @@
         app:layout_constraintEnd_toStartOf="@id/answered_to_you_status"
         app:layout_constraintBottom_toBottomOf="@id/right_bottom_anchor"
         app:layout_constraintTop_toTopOf="@id/right_bottom_anchor"
-        android:text="@string/unread_count" />
+        android:text="@string/unread_count"
+        android:minWidth="20dp"
+        />
 
     <!-- Answered Icon -->
     <ImageView
