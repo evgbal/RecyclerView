@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    &lt;!&ndash; Фон, который будет прозрачным &ndash;&gt;-->
+<!--    <item android:left="56dp"> &lt;!&ndash; 48dp для аватара + 8dp отступ &ndash;&gt;-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <solid android:color="@android:color/transparent" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+    <!-- Линия-разделитель -->
+    <item android:left="64dp">
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorDivider" />
+<!--            <solid android:color="@color/black" />-->
+            <size android:height="1dp" /> <!-- Толщина разделителя -->
+        </shape>
+    </item>
+</layer-list>

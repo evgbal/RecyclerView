@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="0dp"
+    android:paddingStart="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:id="@+id/chatItemLayout"
+    >
+
+
+    <ImageView
+        android:id="@+id/chat_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/chat_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_placeholder_avatar"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_border"
+        />
+
+
+    <!-- Status Icon -->
+    <ImageView
+        android:id="@+id/speeching_status_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:contentDescription="@string/speech_status"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_status_speech"
+        app:layout_constraintBottom_toBottomOf="@id/chat_avatar"
+        app:layout_constraintEnd_toEndOf="@id/chat_avatar"
+        tools:ignore="ImageContrastCheck" />
+
+
+
+    <View
+        android:id="@+id/right_avatar_spacing"
+        android:layout_width="8dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@id/chat_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+<!--    android:clipToOutline="true"-->
+<!--    <ImageView-->
+<!--        android:id="@+id/status_icon"-->
+<!--        android:layout_width="16dp"-->
+<!--        android:layout_height="16dp"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_marginBottom="2dp"-->
+<!--        android:layout_marginEnd="2dp"-->
+<!--        android:src="@drawable/ic_status_speech"-->
+<!--        android:scaleType="centerInside"-->
+<!--        app:layout_constraintBottom_toBottomOf="chat_avatar"-->
+<!--        app:layout_constraintEnd_toEndOf="chat_avatar"-->
+<!--        />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/margin_topic_icon"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="14dp"-->
+<!--        android:contentDescription="@string/margin_topic_channel"-->
+<!--        android:src="@android:color/transparent"-->
+<!--        android:scaleType="centerInside"-->
+<!--        app:layout_constraintTop_toTopOf="@id/chat_topic"-->
+<!--        app:layout_constraintStart_toEndOf="@id/chat_avatar"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="2dp"-->
+<!--        android:layout_marginEnd="0dp"-->
+<!--        android:layout_marginStart="6dp"-->
+<!--        />-->
+
+    <!-- Lock Icon -->
+    <ImageView
+        android:id="@+id/lock_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:contentDescription="@string/lock_channel"
+        android:src="@drawable/ic_lock"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="@id/chat_topic"
+        app:layout_constraintStart_toEndOf="@id/right_avatar_spacing"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="2dp"
+        android:visibility="visible"
+        />
+
+    <!-- Topic / User -->
+    <TextView
+        android:id="@+id/chat_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/lock_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chat_time"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="@string/chat_topic" />
+
+    <!-- Mute Icon -->
+    <ImageView
+        android:id="@+id/mute_channel_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:contentDescription="@string/mute_channel"
+        android:src="@drawable/ic_mute"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="@id/chat_topic"
+        app:layout_constraintStart_toEndOf="@id/chat_topic"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="2dp"/>
+
+    <!-- Verified Icon -->
+    <ImageView
+        android:id="@+id/verified_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:contentDescription="@string/verified_channel"
+        android:src="@drawable/ic_blue_verified"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="@id/chat_topic"
+        app:layout_constraintStart_toEndOf="@id/mute_channel_icon"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="2dp"/>
+
+
+    <!-- Scam Icon -->
+    <ImageView
+        android:id="@+id/scam_icon"
+        android:layout_width="35dp"
+        android:layout_height="14dp"
+        android:contentDescription="@string/scam_channel"
+        android:src="@drawable/ic_scam"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="@id/chat_topic"
+        app:layout_constraintStart_toEndOf="@id/verified_icon"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="2dp"/>
+
+
+    <!-- Answered and Opponent Readed Icon -->
+    <ImageView
+        android:id="@+id/answered_and_readed_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:contentDescription="@string/answered_and_opponent_readed_channel"
+        android:src="@drawable/ic_green_double_check"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="@id/chat_topic"
+        app:layout_constraintEnd_toStartOf="@id/answered_icon"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="2dp"/>
+
+
+    <!-- Answered Icon -->
+    <ImageView
+        android:id="@+id/answered_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:contentDescription="@string/answered_channel"
+        android:src="@drawable/ic_green_check"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="@id/chat_topic"
+        app:layout_constraintEnd_toStartOf="@id/chat_time"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="2dp"/>
+
+    <!-- Time -->
+
+    <TextView
+        android:id="@+id/chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_margin="8dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/archiveButtonLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/_12_34" />
+
+    <!-- User -->
+
+    <TextView
+        android:id="@+id/chat_last_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginStart="0dp"
+        app:layout_constraintStart_toEndOf="@id/right_avatar_spacing"
+        app:layout_constraintTop_toBottomOf="@id/chat_topic"
+        app:layout_constraintEnd_toEndOf="@id/archiveButtonLayout"
+        android:text="@string/chat_last_user" />
+
+
+    <!-- Typing Icon -->
+    <ImageView
+        android:id="@+id/typing_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:contentDescription="@string/typing_channel"
+        android:src="@drawable/ic_bubles"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@id/chat_last_user"
+        app:layout_constraintStart_toEndOf="@id/right_avatar_spacing"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="2dp"/>
+
+    <TextView
+        android:id="@+id/typing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginStart="0dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toEndOf="@id/typing_icon"
+        app:layout_constraintTop_toBottomOf="@id/chat_last_user"
+        android:text="@string/typing"
+        android:textColor="?attr/colorSecondaryVariant"
+        android:visibility="visible"
+
+        />
+
+    <!-- Answerer Icon -->
+    <ImageView
+        android:id="@+id/answerer_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:contentDescription="@string/answerer_channel"
+        android:src="@android:color/transparent"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@id/chat_last_user"
+        app:layout_constraintStart_toEndOf="@id/typing"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="2dp"/>
+
+    <!-- Message -->
+
+    <TextView
+        android:id="@+id/chat_last_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginStart="0dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toEndOf="@id/answerer_icon"
+        app:layout_constraintTop_toBottomOf="@id/chat_last_user"
+        app:layout_constraintEnd_toEndOf="@id/archiveButtonLayout"
+        android:text="@string/last_message_in_chat" />
+
+
+    <TextView
+        android:id="@+id/unread_count"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textSize="12sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="2dp"
+        android:padding="2dp"
+
+        android:gravity="center"
+        android:background="@drawable/circle_border_silver_7"
+        android:textColor="?attr/colorOnPrimary"
+        app:layout_constraintEnd_toStartOf="@id/answered_to_you_status"
+        app:layout_constraintBottom_toBottomOf="@id/answered_to_you_status"
+        app:layout_constraintTop_toTopOf="@id/answered_to_you_status"
+        android:text="@string/unread_count" />
+
+    <!-- Answered Icon -->
+    <ImageView
+        android:id="@+id/answered_to_you_status"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/answered_to_you_status"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_at"
+        android:background="@drawable/circle_border_blue_20"
+        app:layout_constraintEnd_toStartOf="@id/pinned_status"
+        app:layout_constraintBottom_toBottomOf="parent"
+         />
+
+    <!-- Pinned Icon -->
+    <ImageView
+        android:id="@+id/pinned_status"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/pinned_status"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_pinned"
+        app:layout_constraintEnd_toStartOf="@id/archiveButtonLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+
+
+
+    <!-- Шторка с кнопкой архивирования (по умолчанию скрыта) -->
+    <FrameLayout
+        android:id="@+id/archiveButtonLayout"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        android:background="?attr/colorSecondaryVariant"
+        >
+
+
+<!--        &lt;!&ndash; ConstraintLayout для выравнивания кнопки и текста &ndash;&gt;-->
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            >-->
+
+
+<!--&lt;!&ndash;            android:background="@android:color/transparent"&ndash;&gt;-->
+
+
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="8dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:contentDescription="@string/end_of_shadow"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                android:src="@drawable/rounded_background"-->
+<!--                />-->
+
+<!--            &lt;!&ndash; Archive Button &ndash;&gt;-->
+<!--            <ImageButton-->
+<!--                android:id="@+id/archiveButton"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:src="@drawable/ic_archive"-->
+<!--                android:contentDescription="@string/archive"-->
+<!--                android:background="?android:attr/selectableItemBackground"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--            &lt;!&ndash; Text ниже кнопки &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/archiveText"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/archive"-->
+<!--                android:textSize="12sp"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="?attr/colorOnSecondary"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/archiveButton"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/end_of_shadow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/rounded_background" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <!-- Archive Button -->
+                <ImageButton
+                    android:id="@+id/archiveButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_archive"
+                    android:contentDescription="@string/archive"
+                    android:background="?android:attr/selectableItemBackground" />
+
+                <!-- Text ниже кнопки -->
+                <TextView
+                    android:id="@+id/archiveText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/archive"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

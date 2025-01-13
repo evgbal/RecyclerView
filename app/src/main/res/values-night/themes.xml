@@ -1,16 +1,80 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.RecyclerView" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    <style name="Theme.RecyclerView" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+            <!-- <style name="Theme.RecyclerView" parent="Theme.MaterialComponents.DayNight.DarkActionBar">-->
+<!--        &lt;!&ndash; Primary brand color. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/purple_200</item>-->
+<!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
+<!--        <item name="colorOnPrimary">@color/black</item>-->
+<!--        &lt;!&ndash; Secondary brand color. &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/teal_200</item>-->
+<!--        <item name="colorSecondaryVariant">@color/teal_200</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+<!--        &lt;!&ndash; Status bar color. &ndash;&gt;-->
+<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+
+<!--        &lt;!&ndash; Primary brand color &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/telegram_dark_primary</item>-->
+<!--        <item name="colorPrimaryVariant">@color/telegram_dark_primary_variant</item>-->
+<!--        <item name="colorOnPrimary">@color/telegram_dark_text</item>-->
+
+<!--        &lt;!&ndash; Secondary brand color &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/telegram_dark_accent</item>-->
+<!--        <item name="colorSecondaryVariant">@color/telegram_dark_accent_variant</item>-->
+<!--        <item name="colorOnSecondary">@color/telegram_dark_text</item>-->
+
+<!--        &lt;!&ndash; Background and Surface colors &ndash;&gt;-->
+<!--        <item name="android:colorBackground">@color/telegram_dark_background</item>-->
+<!--        <item name="colorSurface">@color/telegram_dark_surface</item>-->
+<!--        <item name="colorOnSurface">@color/telegram_dark_text</item>-->
+
+<!--        &lt;!&ndash; Status bar and navigation bar &ndash;&gt;-->
+<!--        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
+<!--        <item name="android:navigationBarColor">@color/telegram_dark_background</item>-->
+
+<!--        &lt;!&ndash; Custom attributes &ndash;&gt;-->
+<!--        <item name="android:textColorPrimary">@color/telegram_dark_text</item>-->
+<!--        <item name="android:textColorSecondary">@color/telegram_dark_text_secondary</item>-->
+
+
+<!--        &lt;!&ndash; Primary brand color for Dark theme. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/blue_300</item>-->
+<!--        <item name="colorPrimaryVariant">@color/blue_500</item>-->
+<!--        <item name="colorOnPrimary">@color/black</item>-->
+<!--        &lt;!&ndash; Secondary brand color for Dark theme. &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/green_200</item>-->
+<!--        <item name="colorSecondaryVariant">@color/green_500</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+<!--        &lt;!&ndash; Status bar color for Dark theme. &ndash;&gt;-->
+<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/colorDarkPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorDarkPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorDarkOnPrimary</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/colorDarkSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorDarkSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorDarkOnSecondary</item>
+
+        <item name="colorStatusSilverIcon">@color/textSecondary</item>
+
+        <!-- UI elements -->
+        <item name="android:windowBackground">@color/DarkBackground</item>
+        <item name="android:statusBarColor">@color/colorDarkPrimaryVariant</item>
+        <item name="android:navigationBarColor">@color/DarkBackground</item>
+
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/DarkTextPrimary</item>
+        <item name="android:textColorSecondary">@color/DarkTextSecondary</item>
+
+        <!-- Other elements -->
+        <item name="android:divider">@color/DarkDivider</item>
+        <item name="android:dividerVertical">@color/DarkDivider</item>
+
+        <item name="colorDivider">@color/DarkDivider</item>
     </style>
 </resources>
