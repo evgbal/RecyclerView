@@ -1,7 +1,11 @@
 package otus.gpb.recyclerview
 
-// Parent interface
 interface Chat {
+    override fun equals(other: Any?): Boolean
+}
+
+// Parent interface
+interface DataChat: Chat {
     val id: Int
     val lastUserName: String
     val lastMessage: String
@@ -20,7 +24,6 @@ interface Chat {
     var isOpponnentReaded: Boolean
     var isLock: Boolean
 
-    override fun equals(other: Any?): Boolean
 }
 
 // Child class for group chat
@@ -45,7 +48,7 @@ data class GroupChat(
     override var isLock: Boolean = false
 
 
-) : Chat {
+) : DataChat {
 
     // Custom equals implementation for GroupChat
     override fun equals(other: Any?): Boolean {
@@ -94,7 +97,7 @@ data class UserChat(
     override var isAnswered: Boolean = false,
     override var isOpponnentReaded: Boolean = false,
     override var isLock: Boolean = false
-) : Chat {
+) : DataChat {
 
     // Custom equals implementation for UserChat
     override fun equals(other: Any?): Boolean {
@@ -124,3 +127,12 @@ data class UserChat(
     }
 }
 
+object ChatLoading : Chat {
+    override fun equals(other: Any?): Boolean {
+        return this === other
+    }
+
+    override fun hashCode(): Int {
+        return javaClass.hashCode()
+    }
+}

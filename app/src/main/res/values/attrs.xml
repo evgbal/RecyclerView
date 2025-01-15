@@ -3,5 +3,6 @@
     <declare-styleable name="CustomView">
         <attr name="colorDivider" format="color|reference" />
         <attr name="colorStatusSilverIcon" format="color|reference" />
+        <attr name="colorRecyclerItem" format="color|reference" />
     </declare-styleable>
 </resources>

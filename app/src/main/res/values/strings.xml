@@ -36,4 +36,7 @@
     <string name="home_selected">Home selected</string>
     <string name="settings_selected">Settings selected</string>
     <string name="about_selected">About selected</string>
+    <string name="invalid_view_type">Invalid view type</string>
+    <string name="new_message">New message</string>
+    <string name="write_new_message">Write new message</string>
 </resources>

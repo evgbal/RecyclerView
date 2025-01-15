@@ -13,5 +13,6 @@
 
         <item name="colorStatusSilverIcon">@color/textSecondary</item>
         <item name="colorDivider">@color/divider</item>
+        <item name="colorRecyclerItem">@color/colorRecyclerItem</item>
     </style>
 </resources>
